@@ -1,0 +1,3 @@
+class Partner(User):
+	
+		

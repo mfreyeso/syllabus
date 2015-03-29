@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add new Resource - Syllabus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS de Bootstrap -->
+    <link href="file:///C|/Users/Mario/Desktop/PythonApp/pyClass/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+    body {
+	background-color: #E4E4E4;
+}
+    </style>
+  <meta charset="utf-8">
+  </head>  
+  
+  
+  <header>
+  	<nav class="navbar navbar-default" role="navigation">
+  	<!-- Brand and toggle get grouped for better mobile display -->
+  	<div class="navbar-header">
+    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+         <span class="sr-only">Toggle navigation</span>
+      	 <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="#"><h2>SYLLABUS</h2></a>
+    </div>
+
+  	<!-- Collect the nav links, forms, and other content for toggling -->
+  	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	<ul class="nav navbar-nav">
+    	</ul>
+    	
+    	<ul class="nav navbar-nav navbar-right">
+        
+       
+      	<li class="dropdown">
+        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+        		<ul class="dropdown-menu">
+          			<li><a href="#">Contact</a></li>	
+          				<li class="divider"></li>
+          			<li><a href="#">Help</a></li>
+        	</ul>
+      	</li>
+    	</ul>
+  	</div><!-- /.navbar-collapse -->
+	</nav>
+</header>	
+  
+<body>
+	<div class="row">
+  	      <div class="col-md-6">
+            <h2>Add new Resource</h2><br>
+              <form role="form" action="/insertResourceB" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                    <label for="exampleNameResource">Name Resource</label>
+                    <input type="text" name="nameResource" class="form-control" id="identificationUser" placeholder="Enter the resource name">
+                </div>
+              
+                <div class="form-group">
+                  <label for="exampleDateResource"></label>
+                  <input type="date" name="dateResource" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                  <label for="exampleFile">File</label>
+                  <input type="file" class="form-control"  name="dataResource" >
+                </div>
+                
+                <div class="form-group">
+                    <label for="exampleCategoryResource">Category Resource</label>
+                <select class="form-control" name="categorytype">
+                  <option value="0">Socials</option>
+                  <option value="1">Technology</option>
+                  <option value="2">Science</option>
+                  <option value="3">Management</option>
+                </select>
+           		</div>
+               <div class="form-group">
+               <input name="insertResource" type="submit" value="Create" class="btn btn-primary">
+                </div>
+        </form>
+      </div>
+      
+      <div class="col-md-6">
+  	<div class="jumbotron">
+  		<h2>Aqui pueden añadir cualquier cosa</h2>
+  			<p>...</p>
+  		<p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+	</div>
+  </div>
+      
+  </div>
+  
+  
+  
+      
+
+
+    
+
+   
+ 
+<!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+ 
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+    <script src="file:///C|/Users/Mario/Desktop/PythonApp/pyClass/js/bootstrap.min.js"></script>
+  </body>
+</html>

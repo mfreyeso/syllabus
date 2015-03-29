@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resources Found - Syllabus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS de Bootstrap -->
+    <link href="file:///C|/Users/Mario/Desktop/PythonApp/pyClass/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+    body {
+	background-color: #E4E4E4;
+}
+    </style>
+  <meta charset="utf-8">
+  </head>  
+  
+  
+  <header>
+  	<nav class="navbar navbar-default" role="navigation">
+  	<!-- Brand and toggle get grouped for better mobile display -->
+  	<div class="navbar-header">
+    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+         <span class="sr-only">Toggle navigation</span>
+      	 <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand" href="#"><h2>SYLLABUS</h2></a>
+    </div>
+
+  	<!-- Collect the nav links, forms, and other content for toggling -->
+  	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	<ul class="nav navbar-nav">
+    	</ul>
+    	
+    	<ul class="nav navbar-nav navbar-right">
+        
+       
+      	<li class="dropdown">
+        	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
+        		<ul class="dropdown-menu">
+          			<li><a href="#">Contact</a></li>	
+          				<li class="divider"></li>
+          			<li><a href="#">Help</a></li>
+        	</ul>
+      	</li>
+    	</ul>
+  	</div><!-- /.navbar-collapse -->
+	</nav>
+</header>	
+  
+<body>
+	%import os
+    <h3>Resources Found</h3>
+    
+  	      <table class="table table-hover">
+          <tr>
+          	<td><strong>Resource</strong></td>
+            <td><strong>Date</strong></td>
+            <td><strong>Link Download</strong></td>
+          </tr>
+           %for resource in setFound:
+          <tr>
+            <td>{{resource.getNameResource()}}</td>
+            <td>{{resource.getDateResource()}}</td>
+            %nameDownload = os.path.basename(resource.getPathFileDataBase())
+            <td><form action="/resources/{{nameDownload}}"><input  type="submit" value="Download"/></form>
+                </td>	
+          </tr>
+          %end
+  			
+		  </table>
+      
+  
+  
+  
+  
+      
+
+
+    
+
+   
+ 
+<!-- Librería jQuery requerida por los plugins de JavaScript -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+ 
+    <!-- Todos los plugins JavaScript de Bootstrap (también puedes
+         incluir archivos JavaScript individuales de los únicos
+         plugins que utilices) -->
+    <script src="file:///C|/Users/Mario/Desktop/PythonApp/pyClass/js/bootstrap.min.js"></script>
+  </body>
+</html>
